@@ -11,7 +11,7 @@ O = {
     number = true,
     relative_number = true,
     shell = 'bash',
-	timeoutlen = 100,
+	timeoutlen = 1000,
     nvim_tree_disable_netrw = 0,
     extras = false,
 
@@ -82,7 +82,7 @@ O = {
 '              `.   .   .\'  | |__| |_| | | | | (_| | |   \\ V / | | | | | | |',
 '                `-...-\'    |_____\\__,_|_| |_|\\__,_|_|    \\_/  |_|_| |_| |_|',
 		},
-		footer= {'chrisatmachine.com'}
+		footer= {''}
 	}
 }
 
