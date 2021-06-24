@@ -1,6 +1,7 @@
 require('lv-globals')
 vim.cmd('luafile '..CONFIG_PATH..'/lv-settings.lua')
 require('settings')
+require("jg-vim-go")
 require('lv-gitblame')
 require('lv-matchup')
 require('plugins')
@@ -23,6 +24,7 @@ require('lv-rnvimr')
 require('lv-which-key')
 require('lv-lsp-rooter')
 require('lv-zen')
+-- require("go").setup()
 
 -- extras
 if O.extras then

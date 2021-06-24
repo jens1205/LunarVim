@@ -36,7 +36,7 @@ return require("packer").startup(function(use)
     use {"neovim/nvim-lspconfig", opt = true}
     use {"glepnir/lspsaga.nvim", opt = true}
     use {"kabouzeid/nvim-lspinstall", opt = true}
-    use {"folke/trouble.nvim", opt = true}
+    use {"folke/trouble.nvim", opt = true, requires = "kyazdani42/nvim-web-devicons" }
 
     -- Telescope
     use {"nvim-lua/popup.nvim", opt = true}
@@ -70,7 +70,7 @@ return require("packer").startup(function(use)
     use {"folke/which-key.nvim", opt = true}
     use {"ChristianChiarulli/dashboard-nvim", opt = true}
     use {"windwp/nvim-autopairs", opt = true}
-    use {"kevinhwang91/nvim-bqf", opt = true}
+    -- use {"kevinhwang91/nvim-bqf", opt = true}
 
     -- Comments
     use {"terrortylor/nvim-comment", opt = true}
@@ -89,8 +89,12 @@ return require("packer").startup(function(use)
     -- Zen Mode
     use {"Pocco81/TrueZen.nvim", opt = true}
 
-		-- Sane gx for netrw_gx bug
+	-- Sane gx for netrw_gx bug
     use {"felipec/vim-sanegx"}
+   
+    -- Own customization
+    use {'fatih/vim-go', opt = true}                 -- golang
+    use {'tpope/vim-fugitive', opt = true}
 
     require_plugin("nvim-lspconfig")
     require_plugin("lspsaga.nvim")
@@ -114,7 +118,7 @@ return require("packer").startup(function(use)
     require_plugin("dashboard-nvim")
     require_plugin("nvim-autopairs")
     require_plugin("nvim-comment")
-    require_plugin("nvim-bqf")
+    -- require_plugin("nvim-bqf")
     require_plugin("nvcode-color-schemes.vim")
     require_plugin("nvim-web-devicons")
     require_plugin("galaxyline.nvim")
@@ -122,6 +126,9 @@ return require("packer").startup(function(use)
     require_plugin('lsp-rooter.nvim')
     require_plugin("TrueZen.nvim")
     require_plugin("nvim-ts-context-commentstring")
+
+    require_plugin("vim-go")
+    require_plugin("vim-fugitive")
 
     -- Extras
     if O.extras then
